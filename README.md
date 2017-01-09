@@ -64,7 +64,7 @@ Ortak ziyaretçiye sahip olduğunuz siteleri listeler.
     print("\nSite 5 popüler keywords")
     print(result.alaxaKeywords())
     
-    print("\nRakip Analizi : 5 Adet Rakip Site - Orta Ziyaretçi Aldığın Site ;")
+    print("\nZiyaretçicilerin nereden geldiği;")
     print(result.upstreamSites())
     
     print("\nRakip Analizi;")
