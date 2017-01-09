@@ -93,3 +93,18 @@ class AlexaInfo():
         list_to_dict = dict(zip(site_value, site_name))
 
         return list_to_dict
+
+if __name__ == '__main__':
+    alexa = AlexaInfo("python.tc")
+
+    print("Site Genel Bilgiler;")
+    print(alexa.alexaInfo())
+    print("\nSalexaRivalite 5 popüler keywords")
+    print(alexa.alaxaKeywords())
+    print("\nZiyaretçilerin nereden geldiği;")
+    print(alexa.upstreamSites())
+    print("\nRakip Analizi;")
+    print(alexa.alexaRival())
+    print("\nSubDomain Ziyaretçi Analizi")
+    print(alexa.subDomain())
+

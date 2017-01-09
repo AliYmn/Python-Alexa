@@ -33,9 +33,9 @@ Global Rank, Ülke adı , Ülke Rank gibi bilgilere ulaşabildiğiniz fonksiyond
  
     print(alexa.alaxaKeywords())
 
-**Alexa Ortak Ziyaretçi Siteleri (Rakip Analizi)**
+**Alexa Ziyaretçi Aldığınız Siteler**
 
-Ortak ziyaretçi aldığınız 5 adet siteleri listeler
+En çok ziyaretçi aldığınız 3 adet siteyi yüzde olarak verir.
 
     alexa.upstreamSites()
     
@@ -45,7 +45,13 @@ Ortak ziyaretçi aldığınız 5 adet siteleri listeler
  
      alexa.subDomain()
 
+**Alexa Rakip Analizi**
 
+Ortak ziyaretçiye sahip olduğunuz siteleri listeler.
+
+    alexa.alexaRival()
+    
+    
 # Örnek Kullanım
 
     from alexa import AlexaInfo
@@ -61,6 +67,9 @@ Ortak ziyaretçi aldığınız 5 adet siteleri listeler
     print("\nRakip Analizi : 5 Adet Rakip Site - Orta Ziyaretçi Aldığın Site ;")
     print(result.upstreamSites())
     
+    print("\nRakip Analizi;")
+    print(alexa.alexaRival())
+    
     print("\nSubDomain Ziyaretçi Analizi")
     print(result.subDomain())
 
@@ -70,11 +79,14 @@ Ortak ziyaretçi aldığınız 5 adet siteleri listeler
     Site Genel Bilgiler;
     {'747,709': 'Global Rank', 'Turkey': 'Name of country', '19,718': 'Rank in Country ', '46.20%': 'Bounce Rate', '4.40': 'Daily Pageviews per Visitor', '4:37': 'Daily Time on Site', '16.80%': 'Search Traffic', '84': 'Backlink'}
     
-    Site 5 popüler keywords
+    SalexaRivalite 5 popüler keywords
     {'50.54%': 'python nedir', '21.89%': 'python türkiye', '3.49%': 'python.tc', '2.09%': 'pyton nedir', '1.90%': 'python wordpress'}
     
-    Rakip Analizi : 5 Adet Rakip Site - Orta Ziyaretçi Aldığın Site ;
+    Ziyaretçilerin nereden geldiği;
     {'28.4%': 'google.com.tr', '10.5%': 'wmaraci.com', '7.4%': 'facebook.com'}
+    
+    Rakip Analizi;
+    ('pythondersleri.com', 'istihza.com', 'ysar.net', 'djangoturkiye.com', 'halitalptekin.com')
     
     SubDomain Ziyaretçi Analizi
     {'98.70%': 'python.tc'}
