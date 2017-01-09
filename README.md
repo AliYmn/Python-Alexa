@@ -91,4 +91,4 @@ Ortak ziyaretçiye sahip olduğunuz siteleri listeler.
     SubDomain Ziyaretçi Analizi
     {'98.70%': 'python.tc'}
     
- Bilgileri http://www.alexa.com/siteinfo/python.tc üzerinden karşılaştırabilirsiniz.
+ Bilgileri http://www.alexa.com/siteinfo/python.tc üzerinden karşılaştırabilirsiniz...
