@@ -4,7 +4,7 @@ setup(
     name='Alxea',
     version='1.0.0',
     packages=[''],
-    url='',
+    url='https://github.com/AliYmn/Python-Alexa',
     license='MIT LICENSE',
     author='aliyaman',
     author_email='aliymn.db@gmail.com',
