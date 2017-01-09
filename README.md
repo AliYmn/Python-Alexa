@@ -8,7 +8,7 @@ Merhabalar, alexa.com dünya çapında siteleri analiz eder. Bu paket sayesinde 
 
 İlk olarak, paketi yüklemek ile başlayabiliriz.
 
-    pip install git+url
+    sudo pip install git+https://github.com/AliYmn/Python-Alexa
 
 Alexa paketini, kullanacağınız modüle ekleyin.
 
@@ -48,14 +48,17 @@ Ortak ziyaretçi aldığınız 5 adet siteleri listeler
 
 # Örnek Kullanım
 
- alexa = AlexaInfo("python.tc")
-
+    alexa = AlexaInfo("python.tc")
+    
     print("Site Genel Bilgiler;")
     print(alexa.alexaInfo())
+    
     print("\nSite 5 popüler keywords")
     print(alexa.alaxaKeywords())
+    
     print("\nRakip Analizi : 5 Adet Rakip Site - Orta Ziyaretçi Aldığın Site ;")
     print(alexa.upstreamSites())
+    
     print("\nSubDomain Ziyaretçi Analizi")
     print(alexa.subDomain())
 
