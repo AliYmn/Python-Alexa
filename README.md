@@ -31,7 +31,7 @@ Global Rank, Ülke adı , Ülke Rank gibi bilgilere ulaşabildiğiniz fonksiyond
  
  5 adet pöpüler aranan kelimeyi yüzde olarak verir.
  
-    print(alexa.alaxaKeywords())
+    alexa.alaxaKeywords()
 
 **Alexa Ziyaretçi Aldığınız Siteler**
 
@@ -79,7 +79,7 @@ Ortak ziyaretçiye sahip olduğunuz siteleri listeler.
     Site Genel Bilgiler;
     {'747,709': 'Global Rank', 'Turkey': 'Name of country', '19,718': 'Rank in Country ', '46.20%': 'Bounce Rate', '4.40': 'Daily Pageviews per Visitor', '4:37': 'Daily Time on Site', '16.80%': 'Search Traffic', '84': 'Backlink'}
     
-    SalexaRivalite 5 popüler keywords
+    Site 5 popüler keywords;
     {'50.54%': 'python nedir', '21.89%': 'python türkiye', '3.49%': 'python.tc', '2.09%': 'pyton nedir', '1.90%': 'python wordpress'}
     
     Ziyaretçilerin nereden geldiği;
