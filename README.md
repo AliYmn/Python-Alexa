@@ -31,7 +31,7 @@ Global Rank, Ülke adı , Ülke Rank gibi bilgilere ulaşabildiğiniz fonksiyond
  
  5 adet pöpüler aranan kelimeyi yüzde olarak verir.
  
-    print(alexa.alaxaKeywords())
+    alexa.alaxaKeywords()
 
 **Alexa Ortak Ziyaretçi Siteleri (Rakip Analizi)**
 
