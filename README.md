@@ -58,7 +58,7 @@ Ortak ziyaretçi aldığınız 5 adet siteleri listeler
     print("\nSite 5 popüler keywords")
     print(result.alaxaKeywords())
     
-    print("\nRakip Analizi : 5 Adet Rakip Site - Orta Ziyaretçi Aldığın Site ;")
+    print("\nRakip Analizi : 5 Adet Rakip Site - Ortak Ziyaretçi Aldığın Site ;")
     print(result.upstreamSites())
     
     print("\nSubDomain Ziyaretçi Analizi")
@@ -73,7 +73,7 @@ Ortak ziyaretçi aldığınız 5 adet siteleri listeler
     Site 5 popüler keywords
     {'50.54%': 'python nedir', '21.89%': 'python türkiye', '3.49%': 'python.tc', '2.09%': 'pyton nedir', '1.90%': 'python wordpress'}
     
-    Rakip Analizi : 5 Adet Rakip Site - Orta Ziyaretçi Aldığın Site ;
+    Rakip Analizi : 5 Adet Rakip Site - Ortak Ziyaretçi Aldığın Site ;
     {'28.4%': 'google.com.tr', '10.5%': 'wmaraci.com', '7.4%': 'facebook.com'}
     
     SubDomain Ziyaretçi Analizi
