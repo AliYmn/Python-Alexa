@@ -12,7 +12,7 @@ Merhabalar, alexa.com dünya çapında siteleri analiz eder. Bu paket sayesinde 
 
 Alexa paketini, kullanacağınız modüle ekleyin.
 
-    import alexa
+    from alexa import AlexaInfo
 
 Constructor'ı çağırıp, "site url" belirtmeniz yeterli olucaktır. Site url belirtirken
 **başında** http/https olmadan direk domain adı yazın. Örneğin : python.tc
@@ -48,19 +48,22 @@ Ortak ziyaretçi aldığınız 5 adet siteleri listeler
 
 # Örnek Kullanım
 
-    alexa = AlexaInfo("python.tc")
+    from alexa import AlexaInfo
+    
+    result = AlexaInfo("python.tc")
     
     print("Site Genel Bilgiler;")
-    print(alexa.alexaInfo())
+    print(result.alexaInfo())
     
     print("\nSite 5 popüler keywords")
-    print(alexa.alaxaKeywords())
+    print(result.alaxaKeywords())
     
     print("\nRakip Analizi : 5 Adet Rakip Site - Orta Ziyaretçi Aldığın Site ;")
-    print(alexa.upstreamSites())
+    print(result.upstreamSites())
     
     print("\nSubDomain Ziyaretçi Analizi")
-    print(alexa.subDomain())
+    print(result.subDomain())
+
 
 **Output :**
 
