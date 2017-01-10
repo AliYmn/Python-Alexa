@@ -1,14 +1,30 @@
-from bs4 import BeautifulSoup
-import urllib.request
+try:
+    from bs4 import BeautifulSoup
+except:
+    raise "beautifulsoup4, adlı paketi yükleyin."
+
+try:
+    import urllib.request
+except:
+    raise "Alexa paketi python3x ile uyumludur."
+
 
 """
-Author : Ali Yaman - aliymn.db@gmail.com
+Bu modül, Alexa.com üzerinden sitelerin analiz bilgilerini elde etmeye yaramaktadır.
 """
 
 class AlexaInfo():
-    def __init__(self,url)->str:
-        """str url bilgisi alır (constructor)"""
+    def __init__(self,url=str()):
+        """
+        # Arguments #
+        url:str()         | String formatında url bilgisi almaktadır.
+
+        # Properties #
+        url:str()         | İstekte bulunan url alexa üzerinden taranır ve bilgiler verilir.
+        """
+
         self.url = url
+        # Html kodların kompleks şekilde bir arada bulunur.
         soup = BeautifulSoup(urllib.request.urlopen("http://www.alexa.com/siteinfo/{}".format(self.url)),'html.parser')
         self.soup = soup
 
