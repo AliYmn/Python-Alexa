@@ -81,7 +81,13 @@ class AlexaInfo():
         return list_to_dict
 
     def keywords(self) -> dict:
-        """5 popüler kelime ve oranı bilgileri verir."""
+        """5 popüler kelime ve oranı bilgileri verir.
+
+        # Properties #
+        keywords_name         | Keywords adlarını tutar.
+        keywords_value        | keywrods yüzdelerini tutar.
+
+        """
 
         #Veriables
         keywords_name = []
@@ -104,7 +110,13 @@ class AlexaInfo():
         return list_to_dict
 
     def visit(self)->dict:
-        """En çok ziyaret gelen siteleri listeler."""
+        """En çok ziyaret gelen siteleri listeler.
+
+        # Properties #
+        site_name        | site adlarını tutar.
+        site_value       | site yüzdelerini tutar.
+
+        """
 
         #Veriables
         site_name = []
@@ -127,7 +139,12 @@ class AlexaInfo():
         return list_to_dict
 
     def rival(self) -> tuple:
-        """Ortak ziyaretçiye sahip 5 adet site bilgisi verir. Rakip sitelerde diyebiliriz."""
+        """Ortak ziyaretçiye sahip 5 adet site bilgisi verir. Rakip sitelerde diyebiliriz.
+
+        # Properties #
+        site_name        | site adlarını tutar.
+
+        """
 
         #Veriables
         site_name = []
@@ -142,7 +159,13 @@ class AlexaInfo():
         return tuple(site_name)
 
     def sub_domain(self) -> dict:
-        """Sub Domainler üzerinden aldığınız trafik yüzdesini gösterir."""
+        """Sub Domainler üzerinden aldığınız trafik yüzdesini gösterir.
+
+        # Properties #
+        site_name        | site adlarını tutar.
+        site_value       | site yüzdelerini tutar.
+
+        """
 
         #Veriables
         site_name = []
