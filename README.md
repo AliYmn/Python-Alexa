@@ -25,31 +25,31 @@ Constructor'ı çağırıp, "site url" belirtmeniz yeterli olucaktır. Site url 
 
 Global Rank, Ülke adı , Ülke Rank gibi bilgilere ulaşabildiğiniz fonksiyondur.
 
-    alexa.alexaInfo()
+    alexa.ranks()
     
  **Alexa Keywords Bilgileri**
  
  5 adet pöpüler aranan kelimeyi yüzde olarak verir.
  
-    alexa.alaxaKeywords()
+    alexa.keywords()
 
 **Alexa Ziyaretçi Aldığınız Siteler**
 
 En çok ziyaretçi aldığınız 3 adet siteyi yüzde olarak verir.
 
-    alexa.upstreamSites()
+    alexa.visit()
     
  **Alexa Subdomain Analizi**
  
  Subdomain üzerinden aldığınız ziyaretçileri yüzde olarak bilgisini verir.
  
-     alexa.subDomain()
+     alexa.subdomain()
 
 **Alexa Rakip Analizi**
 
 Ortak ziyaretçiye sahip olduğunuz siteleri listeler.
 
-    alexa.alexaRival()
+    alexa.rival()
     
     
 # Örnek Kullanım
@@ -59,19 +59,19 @@ Ortak ziyaretçiye sahip olduğunuz siteleri listeler.
     result = AlexaInfo("python.tc")
     
     print("Site Genel Bilgiler;")
-    print(result.alexaInfo())
+    print(result.info())
     
     print("\nSite 5 popüler keywords")
-    print(result.alaxaKeywords())
+    print(result.keywords())
     
     print("\nZiyaretçicilerin nereden geldiği;")
-    print(result.upstreamSites())
+    print(result.visit())
     
     print("\nRakip Analizi;")
-    print(alexa.alexaRival())
+    print(alexa.rival())
     
     print("\nSubDomain Ziyaretçi Analizi")
-    print(result.subDomain())
+    print(result.subdomain())
 
 
 **Output :**
