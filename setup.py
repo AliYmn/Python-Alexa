@@ -8,5 +8,10 @@ setup(
     license='MIT LICENSE',
     author='aliyaman',
     author_email='aliymn.db@gmail.com',
-    description='Python ile Alexa Verilerine erişmeye yarar (Accessing alexa information through Python)'
+    description='Python ile Alexa Verilerine erişmeye yarar (Accessing alexa information through Python)',
+    keywords = 'Python Alexa',
+    install_requires=[
+          'beautifulsoup4',
+      ],
+
 )

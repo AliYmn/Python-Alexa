@@ -1,13 +1,5 @@
-try:
-    from bs4 import BeautifulSoup
-except:
-    raise "beautifulsoup4, adlı paketi yükleyin."
-
-try:
-    import urllib.request
-except:
-    raise "Alexa paketi python3x ile uyumludur."
-
+from bs4 import BeautifulSoup
+import urllib.request
 
 """
 Bu modül, Alexa.com üzerinden sitelerin analiz bilgilerini elde etmeye yaramaktadır.
