@@ -44,6 +44,7 @@ class AlexaInfo():
         """
 
         #Eğer site yeniyle, default '0' değeri atamaktadır.
+        #Veriables
         global_rank, country_rank, bounce_rate, views, views_hours, search_engine, backlink = "0","0","0","0","0","0","0"
 
         # Rankları filitre ettik.
@@ -81,17 +82,23 @@ class AlexaInfo():
 
     def keywords(self) -> dict:
         """5 popüler kelime ve oranı bilgileri verir."""
+
+        #Veriables
         keywords_name = []
         keywords_value = []
+
         # Keywords filitre ettik.
         keywords = self.soup.find_all('table', attrs={'id': 'keywords_top_keywords_table'})[0].find_all('span',attrs={"class":""})
+
         for i in keywords:
             #Dict oluşturabilmek için, iki ayrı liste kayıt ediyoruz.
             if(keywords.index(i) % 2):
+                #Key
                 keywords_name.append(i.text)
             else:
+                #Value
                 keywords_value.append((i.text))
-
+        #Dict
         list_to_dict = dict(zip(keywords_name,keywords_value))
 
         return list_to_dict
@@ -99,6 +106,7 @@ class AlexaInfo():
     def visit(self)->dict:
         """En çok ziyaret gelen siteleri listeler."""
 
+        #Veriables
         site_name = []
         site_value = []
 
@@ -121,7 +129,9 @@ class AlexaInfo():
     def rival(self) -> tuple:
         """Ortak ziyaretçiye sahip 5 adet site bilgisi verir. Rakip sitelerde diyebiliriz."""
 
+        #Veriables
         site_name = []
+
         #Bilgiler alınıyor.
         rival_site = self.soup.find_all('table', attrs={'id': 'audience_overlap_table'})[0].find_all("a")
 
@@ -134,6 +144,7 @@ class AlexaInfo():
     def sub_domain(self) -> dict:
         """Sub Domainler üzerinden aldığınız trafik yüzdesini gösterir."""
 
+        #Veriables
         site_name = []
         site_value = []
 
