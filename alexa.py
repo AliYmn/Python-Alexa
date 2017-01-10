@@ -23,12 +23,15 @@ class AlexaInfo():
         bounce_rate = ranks[2].text.strip() # Çıkma Oranı
         views = ranks[3].text.strip() # Günlük ziyaretçi başına düşen, görüntülenme sayısı
         views_hours = ranks[4].text.strip() # Sitedeki günlük saat görüntülenme sayısı
+        
         if(len(ranks) == 5):
             ranks.insert(4,"")
+            
         search_engine = ranks[5].text.strip() # Aramaların % kaçı arama motorundan gerçekleşiyor?
         backlink = self.soup.find_all('span',attrs={"class":'font-4 box1-r'})[0].text
         info_list = ["Global Rank", "Name of country", "Rank in Country ", "Bounce Rate", "Daily Pageviews per Visitor",
                      "Daily Time on Site", "Search Traffic", "Backlink"]
+        
         result = [global_rank,country_name,country_rank,bounce_rate,views,views_hours,search_engine,backlink]
         list_to_dict = dict(zip(result,info_list))
 
