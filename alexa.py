@@ -70,6 +70,7 @@ class AlexaInfo():
         list_to_dict = dict(zip(site_value,site_name))
 
         return list_to_dict
+    
     def alexaRival(self):
         """Ortak ziyaretçiye sahip 5 adet site bilgisi verir. Rakip sitelerde diyebiliriz."""
         site_name = []
