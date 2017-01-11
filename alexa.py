@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 from bs4 import BeautifulSoup
 import urllib.request
 import sys
@@ -233,11 +235,11 @@ class AlexaInfo():
 if __name__ == '__main__':
 
     url = 'python.tc'
-    #Terminal : python alexa.py "python.tc"
+    #Terminal : python alexa.py python.tc
     if len(sys.argv) > 1:
         url = sys.argv[1]
 
-    alexa = AlexaInfo("python.tc")
+    alexa = AlexaInfo(url)
 
     print("Site Genel Bilgiler;")
     print(alexa.ranks())
