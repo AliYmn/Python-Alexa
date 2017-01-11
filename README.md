@@ -77,10 +77,10 @@ Ortak ziyaretçiye sahip olduğunuz siteleri listeler.
     print("\nRakip Analizi;")
     print(alexa.rival())
     
-    print("\nSubDomain Ziyaretçi Analizi")
+    print("\nSubDomain Ziyaretçi Analizi;")
     print(result.subdomain())
     
-    print("\nİnsanların ziyaret analizi")
+    print("\nİnsanların ziyaret analizi;")
     print(alexa.people())
 
 
@@ -98,10 +98,10 @@ Ortak ziyaretçiye sahip olduğunuz siteleri listeler.
     Rakip Analizi;
     ('pythondersleri.com', 'istihza.com', 'ysar.net', 'djangoturkiye.com', 'halitalptekin.com')
     
-    SubDomain Ziyaretçi Analizi
+    SubDomain Ziyaretçi Analizi;
     {'98.70%': 'python.tc'}
     
-    İnsanların ziyaret analizi
+    İnsanların ziyaret analizi;
     {'male': 99.0, 'female': 0.0, 'no_college': 0.0, 'some_college': 0.0, 'graduate_scholl': 80.5, 'home': 35.0, 'school': 85.0, 'work': 0.0}
 
     

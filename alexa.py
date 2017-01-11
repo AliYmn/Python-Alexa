@@ -251,8 +251,8 @@ if __name__ == '__main__':
     print("\nRakip Analizi;")
     print(alexa.rival())
 
-    print("\nSubDomain Ziyaretçi Analizi")
+    print("\nSubDomain Ziyaretçi Analizi;")
     print(alexa.sub_domain())
 
-    print("\nİnsanların ziyaret analizi")
+    print("\nİnsanların ziyaret analizi;")
     print(alexa.people())
