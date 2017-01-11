@@ -113,8 +113,6 @@ Alexa.py direk indirip, script için kullanmak isteyenler;
 
     python alexa.py "python.tc"
 
-veya
-
     python alexa.py python.tc
 
 şeklinde kullanabilirler.
