@@ -114,14 +114,15 @@ class AlexaInfo():
         site_name = []
         site_value = []
 
-        ups_site = self.soup.find_all('table', attrs={'id': 'keywords_upstream_site_table'})[0].find_all("a")
-        ups_value = self.soup.find_all('table', attrs={'id': 'keywords_upstream_site_table'})[0].find_all('span',attrs={"class":""})
+        #Bilgileri ayrıştılıyor.
+        visit_site = self.soup.find_all('table', attrs={'id': 'keywords_upstream_site_table'})[0].find_all("a")
+        visit_value = self.soup.find_all('table', attrs={'id': 'keywords_upstream_site_table'})[0].find_all('span',attrs={"class":""})
 
-        for i in ups_value:
+        for i in visit_value:
             #Key
             site_value.append(i.text)
 
-        for k in ups_site:
+        for k in visit_site:
             #Value
             site_name.append(k.text)
 
@@ -179,6 +180,52 @@ class AlexaInfo():
 
         return list_to_dict
 
+    def people(self):
+        " Kadınların,erkeklerin,öğrencilerin ve çalışanların vb. kriterlere göre ziyaret analizilerini bulundurur."
+
+        #Veriables
+        style = []
+        result = []
+        count = 0
+
+
+        while True:
+            try:
+                for i in self.soup.find_all('span',attrs={'class':'pybar-bg'})[count].find_all('span'):
+                    value = i.get('style')[6:9]
+                    result = result + value.split('%')
+                    count = count+1
+
+            except:
+                break
+
+        for k in result:
+            #Filitre edip, sadece oranları al.
+            if(k == '%' or k == ';' or k==""):
+                pass
+            else:
+                style.append(k)
+
+        male = (int(style[0])+int(style[1]))/2
+        female = (int(style[2])+int(style[3]))/2
+        no_college = (int(style[4])+int(style[5]))/2
+        some_college = (int(style[6])+int(style[7]))/2
+        graduate_school = (int(style[8])+int(style[9]))/2
+        college = (int(style[10])+int(style[11]))/2
+        home = (int(style[12])+int(style[13]))/2
+        school = (int(style[14])+int(style[15]))/2
+        work = (int(style[16])+int(style[17]))/2
+
+        #Key
+        key = ['male','female','no_college','some_college','graduate_scholl','home','school','work']
+        #Value
+        value = [male,female,no_college,some_college,graduate_school,college,home,school,work]
+
+        #Dict
+        list_to_dict = dict(zip(key, value))
+
+        return list_to_dict
+
 if __name__ == '__main__':
     alexa = AlexaInfo("python.tc")
 
@@ -197,3 +244,5 @@ if __name__ == '__main__':
     print("\nSubDomain Ziyaretçi Analizi")
     print(alexa.sub_domain())
 
+    print("\nİnsanların ziyaret analizi")
+    print(alexa.people())

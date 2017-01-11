@@ -50,6 +50,13 @@ En çok ziyaretçi aldığınız 3 adet siteyi yüzde olarak verir.
 Ortak ziyaretçiye sahip olduğunuz siteleri listeler.
 
     alexa.rival()
+
+ **Alexa İnsanların Ziyaret Analizi**
+ 
+ Kadınların,erkeklerin,öğrencilerin ve çalışanların vb. kriterlere göre ziyaret analizilerini bulundurur.
+ 
+    alexa.people()
+    
     
     
 # Örnek Kullanım
@@ -72,6 +79,9 @@ Ortak ziyaretçiye sahip olduğunuz siteleri listeler.
     
     print("\nSubDomain Ziyaretçi Analizi")
     print(result.subdomain())
+    
+    print("\nİnsanların ziyaret analizi")
+    print(alexa.people())
 
 
 **Output :**
@@ -90,5 +100,9 @@ Ortak ziyaretçiye sahip olduğunuz siteleri listeler.
     
     SubDomain Ziyaretçi Analizi
     {'98.70%': 'python.tc'}
+    
+    İnsanların ziyaret analizi
+    {'male': 99.0, 'female': 0.0, 'no_college': 0.0, 'some_college': 0.0, 'graduate_scholl': 80.5, 'home': 35.0, 'school': 85.0, 'work': 0.0}
+
     
  Bilgileri http://www.alexa.com/siteinfo/python.tc üzerinden karşılaştırabilirsiniz...
