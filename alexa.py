@@ -1,5 +1,16 @@
-from bs4 import BeautifulSoup
-import urllib.request
+#-*- coding: utf-8 -*-
+
+try:
+    from bs4 import BeautifulSoup
+except:
+    raise "beautifulsoup4, adlı paketi yükleyin."
+
+try:
+    import urllib.request
+    import sys
+except:
+    raise "Alexa paketi python3x ile uyumludur."
+
 
 """
 Bu modül, Alexa.com üzerinden sitelerin analiz bilgilerini elde etmeye yaramaktadır.
@@ -227,7 +238,12 @@ class AlexaInfo():
         return list_to_dict
 
 if __name__ == '__main__':
-    alexa = AlexaInfo("python.tc")
+    url = 'python.tc'
+
+    if len(sys.argv)>1:
+        url = sys.argv[1]
+
+    alexa = AlexaInfo(url)
 
     print("Site Genel Bilgiler;")
     print(alexa.ranks())
