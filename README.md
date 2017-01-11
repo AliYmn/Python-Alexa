@@ -106,3 +106,11 @@ Ortak ziyaretçiye sahip olduğunuz siteleri listeler.
 
     
  Bilgileri http://www.alexa.com/siteinfo/python.tc üzerinden karşılaştırabilirsiniz...
+
+# Script Olarak Kullanmak
+
+Alexa.py direk indirip, script için kullanmak isteyenler;
+
+    python alexa.py "python.tc"
+
+şeklinde kullanabilirler.

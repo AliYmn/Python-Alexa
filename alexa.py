@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib.request
+import sys
 
 """
 Bu modül, Alexa.com üzerinden sitelerin analiz bilgilerini elde etmeye yaramaktadır.
@@ -19,6 +20,8 @@ class AlexaInfo():
         # Html kodların kompleks şekilde bir arada bulunur.
         soup = BeautifulSoup(urllib.request.urlopen("http://www.alexa.com/siteinfo/{}".format(self.url)),'html.parser')
         self.soup = soup
+
+
 
     def ranks(self) -> dict:
         """
@@ -227,6 +230,12 @@ class AlexaInfo():
         return list_to_dict
 
 if __name__ == '__main__':
+
+    url = 'python.tc'
+    #Terminal : python alexa.py "site url"
+    if len(sys.argv) > 1:
+        url = sys.argv[1]
+
     alexa = AlexaInfo("python.tc")
 
     print("Site Genel Bilgiler;")
