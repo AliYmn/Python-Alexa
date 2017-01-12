@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 from bs4 import BeautifulSoup
 import urllib.request
 import sys
@@ -41,13 +43,18 @@ class AlexaInfo():
 
         #Eğer site yeniyle, default '0' değeri atamaktadır.
         #Veriables
+
         global_rank, country_rank, bounce_rate, views, views_hours, search_engine, backlink = "0","0","0","0","0","0","0"
 
         # Rankları filitre ettik.
         rank = self.soup.find_all('strong', attrs={'class': 'metrics-data align-vmiddle'})
 
         #Elde edilen bilgileri,değişkenlere aktar
-        country_name = self.soup.find_all('span', attrs={'class': 'countryRank'})[0].find("h4").find("a").text
+        try:
+            country_name = self.soup.find_all('span', attrs={'class': 'countryRank'})[0].find("h4").find("a").text
+        except:
+            country_name = "0"
+
         global_rank = rank[0].text.strip() # Dünya Rankı
         country_rank = rank[1].text.strip()# Ülke rankı
         bounce_rate = rank[2].text.strip() # Çıkma Oranı
@@ -233,11 +240,11 @@ class AlexaInfo():
 if __name__ == '__main__':
 
     url = 'python.tc'
-    #Terminal : python alexa.py "python.tc"
+    #Terminal : python alexa.py python.tc
     if len(sys.argv) > 1:
         url = sys.argv[1]
 
-    alexa = AlexaInfo("python.tc")
+    alexa = AlexaInfo(url)
 
     print("Site Genel Bilgiler;")
     print(alexa.ranks())
